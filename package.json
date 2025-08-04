@@ -1,0 +1,20 @@
+{
+  "name": "gestion-pfe",
+  "version": "1.0.0",
+  "description": "<<<<<<< HEAD\r # Gestion PFE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/Gelivro_management/gestion-pfe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/Gelivro_management/gestion-pfe/issues"
+  },
+  "homepage": "https://gitlab.com/Gelivro_management/gestion-pfe#readme"
+}

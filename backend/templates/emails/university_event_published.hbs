@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{eventTitle}}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #007bff;
+        }
+        .header h1 {
+            color: #007bff;
+            margin: 0;
+        }
+        .content {
+            margin-bottom: 30px;
+        }
+        .event-details {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .event-details h3 {
+            color: #333;
+            margin-top: 0;
+        }
+        .detail-item {
+            margin: 10px 0;
+            padding: 5px 0;
+        }
+        .detail-label {
+            font-weight: bold;
+            color: #555;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>{{appName}}</h1>
+            <p>Notification d'événement</p>
+        </div>
+        
+        <div class="content">
+            <p>Bonjour {{recipient.name}},</p>
+            
+            <p>Un nouvel événement a été publié par <strong>{{universityName}}</strong> :</p>
+            
+            <div class="event-details">
+                <h3>📅 {{eventTitle}}</h3>
+                
+                {{#if eventDescription}}
+                <div class="detail-item">
+                    <span class="detail-label">Description :</span>
+                    <p>{{eventDescription}}</p>
+                </div>
+                {{/if}}
+                
+                {{#if formattedEventDate}}
+                <div class="detail-item">
+                    <span class="detail-label">Date et heure :</span>
+                    {{formattedEventDate}}
+                </div>
+                {{/if}}
+                
+                {{#if eventLocation}}
+                <div class="detail-item">
+                    <span class="detail-label">Lieu :</span>
+                    {{eventLocation}}
+                </div>
+                {{/if}}
+                
+                {{#if eventCategory}}
+                <div class="detail-item">
+                    <span class="detail-label">Catégorie :</span>
+                    {{eventCategory}}
+                </div>
+                {{/if}}
+                
+                <div class="detail-item">
+                    <span class="detail-label">Organisé par :</span>
+                    {{universityName}}
+                </div>
+            </div>
+            
+            {{#if actionUrl}}
+            <div style="text-align: center;">
+                <a href="{{actionUrl}}" class="cta-button">Voir les détails</a>
+            </div>
+            {{/if}}
+            
+            <p>N'hésitez pas à consulter votre tableau de bord pour plus d'informations.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Ce message a été envoyé automatiquement par {{appName}}.</p>
+            <p>© {{currentYear}} {{appName}}. Tous droits réservés.</p>
+        </div>
+    </div>
+</body>
+</html>

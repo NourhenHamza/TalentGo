@@ -1,0 +1,29 @@
+{{> base 
+  subject="Votre entreprise a été approuvée"
+  content="
+    <p>Félicitations ! Votre entreprise a été approuvée et vous pouvez maintenant accéder à toutes les fonctionnalités de notre plateforme.</p>
+    
+    <div class='highlight-box'>
+      <h3>Informations de votre entreprise</h3>
+      <p><strong>Nom:</strong> {{company.nom}}</p>
+      <p><strong>Secteur:</strong> {{company.secteur}}</p>
+      <p><strong>Adresse:</strong> {{company.adresse}}</p>
+      <p><strong>Contact:</strong> {{company.email_contact}}</p>
+    </div>
+    
+    <p>Vous pouvez maintenant :</p>
+    <ul>
+      <li>Publier des offres de stage</li>
+      <li>Consulter les candidatures</li>
+      <li>Gérer vos stagiaires</li>
+      <li>Accéder aux outils de suivi</li>
+    </ul>
+    
+    <p>Notre équipe reste à votre disposition pour vous accompagner dans l'utilisation de la plateforme.</p>
+  "
+  actionUrl=actionUrl
+  actionText="Accéder à mon espace entreprise"
+  priority=priority
+  priorityLabel=priorityLabel
+}}
+
